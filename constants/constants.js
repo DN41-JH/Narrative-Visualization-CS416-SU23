@@ -1,4 +1,4 @@
-const dataPath = "data/hhh";  // This should be the path of source .csv files on deployment.
+const dataPath = "https://github.com/DN41-JH/Narrative-Visualization-CS416-SU23/blob/main/data/";  // This should be the path of source .csv files on deployment.
 const hours_vs_gdp_csv = "annual-working-hours-vs-gdp-per-capita.csv";
 const hours_vs_productivity_csv = "productivity-vs-annual-hours-worked.csv"; 
 const time_vs_productivity_csv = "labor-productivity-per-hour.csv";
