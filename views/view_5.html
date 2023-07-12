@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Narrative Visluzation Project, Jianghuai Liu —— CS416 SU23 </title>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="../utilities/view5_utils.js"></script>
+    <script src="../utilities/common_utils.js"></script>
+    <script src="../constants/constants.js"></script>
+
+    <link rel="stylesheet" href="../styles/general.css">
+    <link rel="stylesheet" href="../styles/button.css">
+    <link rel="stylesheet" href="../styles/bubble.css">
+    <link rel="stylesheet" href="../styles/tooltip.css">
+
+    <!-- Bootstrap (5.3.0) CSS Library -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"> -->
+</head>
+
+<body onload='renderFourthChart(2015)'>
+    <div class="container">
+        <div id="view-5">
+            <h2 class="text-center"> Summary: What Can We Learn? </h2>
+
+            <ul>
+                <li class="font-size-lg mt-10">
+                    The distributions of labour productivity, average working hours and GDP are highly uneven across the 
+                    world, so is the level of economic development.
+                </li>
+                
+                <li class="font-size-lg mt-10"> 
+                    Workers in poorer countries (less GDP or labour productivity) tend to work more, sometimes a lot more, 
+                    than their counterparts in wealthier countries. This means that an average resident in country like 
+                    Myanmar and Cambodia is not only financially poor but also leisure poor: their economies have low 
+                    productivity and therefore require them to work longer hours. 
+                </li>
+
+                <li class="font-size-lg mt-10">
+                    Technology advancement and economic globalization are two important drivers of labour productivity 
+                    growth, which eventually lead to shorter average working hours. However, different countries in 
+                    different regions benefit from technology progress and economic globalization with different extent, 
+                    which exacerbates the economic inequality across the world.
+                </li>
+
+                <li class="font-size-lg mt-10">
+                    This set of data makes us rethink of our notions of economic globalization and wealth distribution 
+                    over the last century, as well as the nature and cause of significant economic/work inequality among 
+                    different countries and regions.
+                </li>
+            </ul>
+
+            <font class="font-size-lg" color="red">
+                <b> NOTE: </b> Try hovering over any country/region, and you will see the <ins> total population</ins> 
+                along with its average <ins> GDP per capita</ins> in 2019:
+            </font>
+            <svg id="worldmap" width="1200" height="500"> </svg>
+            <p> </p>
+
+            <em> Some regions are coloured black as data was unavailable. </em>
+        </div>
+
+        <div class="mt-4 p-3 bg-primary text-white rounded">
+            <div class="mt-30">
+                CSV Data Source of Visluzation: 
+                <a href="https://ourworldindata.org/grapher/annual-working-hours-vs-gdp-per-capita-pwt" 
+                    style="color:#C70039;" target="_blank"> 
+                    <i> Our World in Data</i>, Annual working hours vs. GDP per capita
+                </a>
+            </div>
+
+            <div class="mt-10 text-center">
+                Home Page:
+                <span style="font-size:30px"> &LongRightArrow; </span>
+                <a class="btn btn-warning btn-s" href="../index.html" role="button"> 
+                    <button class="my-button"> Back to Home </button> 
+                </a>
+            </div>
+
+            <div class="mt-10 text-center">
+                Previous: Evolution of Average Labour Productivity after World War II
+                <span style="font-size:30px"> &LongRightArrow; </span>
+                <a class="btn btn-danger btn-s" href="view_4.html" role="button"> 
+                    <button class="my-button"> Previous Scene </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <p> </p>
+</body>
+</html>

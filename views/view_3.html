@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Narrative Visluzation Project, Jianghuai Liu —— CS416 SU23 </title>
+    
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="../utilities/view3_utils.js"></script>
+    <script src="../utilities/common_utils.js"></script>
+    <script src="../constants/constants.js"></script>
+
+    <!-- d3-annotation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/2.5.1/d3-annotation.min.js"
+        integrity="sha512-iBAeBWWWFb8HqSBcrqcz98iIpuVH1la39dEYHtyQ/pGpeCQTQVvLJOWAuhv2Q7JSHp9k7hWA7sGxU3hHJe+tFg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+
+    <link rel="stylesheet" href="../styles/general.css">
+    <link rel="stylesheet" href="../styles/button.css">
+    <link rel="stylesheet" href="../styles/bubble.css">
+    <link rel="stylesheet" href="../styles/tooltip.css">
+
+    <!-- Bootstrap (5.3.0) CSS Library -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"> -->
+</head>
+
+<body onload='renderSecondChart(2015)'>
+    <div class="container">
+        <div id="view-3">
+            <h2 class="text-center"> Average Annual Working Hours vs. Hourly Labour Productivity </h2>
+
+            <p class="font-size-lg">
+                Description: Below shows a scatter plot illustrating the average <i> annual working 
+                hours</i> (horizontal axis, in [hour]) versus the average <i> hourly labour productivity</i> 
+                (verticle axis, in [$/hour]), in the year of 2019. Each bubble in the plot represents a 
+                distinct country, with the bubble size scaled by its total population, and colored according 
+                to continent as shown in the legend (top right corner).
+            </p>
+
+            <p class="font-size-lg">
+                Elaboration: In this case, the hourly labour productivity is defined as the economic return 
+                (i.e. money earned) for one hour of work. At the most concrete level, for example, labour productivity 
+                can represent the value of cars that an average automobile factory workers assemble in an hour,
+                or the value of food that an average restaurant cook make in one hour, etc.
+            </p>
+
+            <font class="font-size-lg" color="red">
+                <b> NOTE: </b> Try hovering over any bubble, and you will see the <ins> annual hours worked</ins> 
+                along with its average <ins> hourly labour productivity</ins> in 2019:
+            </font>
+
+            <div id="scatterplot-2"> </div>
+        </div>
+
+        <div class="mt-4 p-3 bg-primary text-white rounded">
+            <p class="font-size-lg"> According to the scatter plot above, one can observe that: </p>
+
+            <ul>
+                <li class="font-size-lg mt-10">
+                    Higher average productivity usually corresponds to higher GDP per capita as well, as the 
+                    countries of higher labour productivity align with higher average annual GDP countries shown
+                    in previous slides (again, mostly in Europe, North America, Oceania and part of Asia).
+                </li>
+
+                <li class="font-size-lg mt-10">
+                    Higher labour productivity represents higher economic development level, but is (in general)
+                    associated with fewer working hours, which is especially the case for countries in Europe (blue),
+                    North America (green) and Oceania (brown). The exceptions are mostly in East Asia  
+                    (Hong Kong and Singapore, etc.), whose average working hour is notably higher than their
+                    counterpart contries in Europe and North America with similar high productivity.
+                </li>
+
+                <li class="font-size-lg mt-10">
+                    An explanation of such high productivity — low working hours correlation could be that, higher 
+                    productivity per hour provides workers with higher incomes and therefore allows them to work 
+                    shorter time to reach the desired and comfortable standard of living. The exception of some 
+                    East Asian countries (i.e. Hong Kong and Singapore) is more likely to be attributed to cultural
+                    aspect.
+                </li>
+
+                <li class="font-size-lg mt-10">
+                    The key driver of rising incomes and decreasing working hours is productivity growth; so it is 
+                    important to investigate the evolution of labour productivity over time (as in the next slide),
+                    before a comprehensive understanding on the notably income and productivity differences among 
+                    countries can be reached.
+                </li>
+            </ul>
+
+            <hr class="my-4">
+
+            <div class="mt-30">
+                CSV Data Source of Visluzation:
+                <a href="https://ourworldindata.org/grapher/productivity-vs-annual-hours-worked" 
+                    style="color:#C70039" target="_blank"> 
+                    <i> Our World in Data</i>, Annual working hours vs. labor productivity
+                </a>
+            </div>
+            <p> </p>
+
+            <div class="mt-10 text-center">
+                Next: Labour Productivity Change over Years
+                <span style="font-size:30px"> &LongRightArrow; </span>
+                <a class="btn btn-warning btn-s" href="view_4.html" role="button"> 
+                    <button class="my-button"> Next Scene </button>
+                </a>
+            </div>
+
+            <div class="mt-10 text-center">
+                Previous: Average Annual Working Hours vs. GDP per Capita
+                <span style="font-size:30px"> &LongRightArrow; </span>
+                <a class="btn btn-danger btn-s" href="view_2.html" role="button"> 
+                    <button class="my-button"> Previous Scene </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <p> </p>
+</body>
+</html>

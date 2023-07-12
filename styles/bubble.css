@@ -1,0 +1,6 @@
+/* CSS for bubbles in scatter plots */
+
+.bubbles {
+    stroke-width: 1.5px;
+    stroke: black;
+}

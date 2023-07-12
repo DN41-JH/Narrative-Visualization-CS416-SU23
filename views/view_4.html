@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Narrative Visluzation Project, Jianghuai Liu —— CS416 SU23 </title>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="../utilities/view4_utils.js"></script>
+    <script src="../utilities/common_utils.js"></script>
+    <script src="../constants/constants.js"></script>
+
+    <!-- d3-annotation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/2.5.1/d3-annotation.min.js"
+        integrity="sha512-iBAeBWWWFb8HqSBcrqcz98iIpuVH1la39dEYHtyQ/pGpeCQTQVvLJOWAuhv2Q7JSHp9k7hWA7sGxU3hHJe+tFg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+
+    <link rel="stylesheet" href="../styles/general.css">
+    <link rel="stylesheet" href="../styles/button.css">
+    <link rel="stylesheet" href="../styles/bubble.css">
+    <link rel="stylesheet" href="../styles/tooltip.css">
+
+    <!-- Bootstrap (5.3.0) CSS Library -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"> -->
+</head>
+
+<body onload='renderThirdChart()'>
+    <div class="container">
+        <div id="view-4">
+            <h2 class="text-center"> Evolution of Average Labour Productivity after World War II </h2>
+
+            <p class="font-size-lg">
+                Description: Below shows a line plot illustrating the average <i> hourly labour productivity</i> 
+                (verticle axis, in [$/hour]) over <i> time</i> (horizontal axis, in [year]), recorded after 
+                World War II. The plot involves a single line representing the change of average hourly labour 
+                productivity over years, for a particle selected country. The line color reflects the country's 
+                continent consistent with previous slides.
+            </p>
+
+            <font class="font-size-lg" color="red">
+                <b> NOTE: </b> Try (re)selecting a country from the dropdown menu below to see how its labour productivity 
+                changes over years.
+            </font>
+            <p> </p>
+
+            <select id="select-country"> </select>
+            <div id="lineplot-1"> </div>
+        </div>
+
+        <div class="mt-4 p-3 bg-primary text-white rounded">
+            <p class="font-size-lg"> According to the line plot above, one can infer that: </p>
+
+            <ul>
+                <li class="font-size-lg mt-10">
+                    Almost all countries shown in the data set experience growth of average labour productivity
+                    since the end of World War II; however, some countries grow quickly (mostly in Europe, North
+                    America and Oceania), while others (mostly in South America, Africa and Asia) grow much slower 
+                    or go ups and downs.
+                </li>
+
+                <li class="font-size-lg mt-10">
+                    The time of notable increase of labour productivity growth rate (especially after 1980) of most 
+                    countries is aligned with the improvements and universalization of electronic computers, as well 
+                    as the enhancement of international collaboration. Therefore, <u>technology advancement</u> and 
+                    <u>economic globalization</u> can be two important drivers of labour productivity growth, which 
+                    eventually lead to shorter average working hours.
+                </li>
+
+                <li class="font-size-lg mt-10">
+                    In the US, for example, farm production per labour hour increased nearly 16-fold from 1948 to 2011. 
+                    This increased productivity enables the US to feed a rapidly growing population since the end of 
+                    World War II, even while the fraction of people working in agriculture constantly decreases. 
+                    Meanwhile, the improvement of agricultural efficiency associated with increased productivity enables
+                    shorter working hours to achieve certain agricultural output.
+                </li>
+
+                <li class="font-size-lg mt-10">
+                    Finally, different countries in different regions benefit from technology progress and economic 
+                    globalization with different extent, as reflected by their significantly different productivity 
+                    growth rates over years. In general, North American, European, Oceanian and some East Asian 
+                    countries benefit from the two factors the most. Hence, the difference in productivity and economic
+                    prosperity among countries may not be fully attributed to their work ethic and diligence, but can 
+                    be the differences in opportunities and politics.
+                </li>
+            </ul>
+
+            <hr class="my-4">
+
+            <div class="mt-30">
+                CSV Data Source of Visluzation: 
+                <a href="https://ourworldindata.org/grapher/labor-productivity-per-hour-PennWorldTable" 
+                    style="color:#C70039;" target="_blank"> 
+                    <i> Our World in Data</i>, Productivity: output per hour worked
+                </a>
+            </div>
+            <p> </p>
+
+            <div class="mt-10 text-center">
+                Next: Summary and Conclusion
+                <span style="font-size:30px"> &LongRightArrow; </span>
+                <a class="btn btn-warning btn-s" href="view_5.html" role="button"> 
+                    <button class="my-button"> Next Scene </button>
+                </a>
+            </div>
+
+            <div class="mt-10 text-center">
+                Previous: Average Annual Working Hours vs. Hourly Labour Productivity
+                <span style="font-size:30px"> &LongRightArrow; </span>
+                <a class="btn btn-danger btn-s" href="view_3.html" role="button"> 
+                    <button class="my-button"> Previous Scene </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <p> </p>
+</body>
+</html>

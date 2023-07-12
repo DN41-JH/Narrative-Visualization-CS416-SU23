@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Narrative Visluzation Project, Jianghuai Liu —— CS416 SU23 </title>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="../utilities/view2_utils.js"></script>
+    <script src="../utilities/common_utils.js"></script>
+    <script src="../constants/constants.js"></script>
+
+    <!-- d3-annotation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/2.5.1/d3-annotation.min.js"
+        integrity="sha512-iBAeBWWWFb8HqSBcrqcz98iIpuVH1la39dEYHtyQ/pGpeCQTQVvLJOWAuhv2Q7JSHp9k7hWA7sGxU3hHJe+tFg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+
+    <link rel="stylesheet" href="../styles/general.css">
+    <link rel="stylesheet" href="../styles/button.css">
+    <link rel="stylesheet" href="../styles/bubble.css">
+    <link rel="stylesheet" href="../styles/tooltip.css">
+
+    <!-- Bootstrap (5.3.0) CSS Library -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"> -->
+</head>
+
+<body onload='renderFirstChart(2015)'>
+    <div class="container">
+        <div id="view-2">
+            <h2 class="text-center"> Average Annual Working Hours vs. GDP per Capita (2019) </h2>
+
+            <p class="font-size-lg">
+                Description: Below shows a scatter plot illustrating the average <i> annual working 
+                hours</i> (horizontal axis, in [hour]) versus the average <i> GDP per capita</i> 
+                (verticle axis, in [$/year]), in the year of 2019. Each bubble in the plot represents 
+                a distinct country, with the bubble size scaled by its total population, and colored 
+                according to continent as shown in the legend (top right corner).
+            </p>
+
+            <font class="font-size-lg" color="red">
+                <b> NOTE: </b> Try hovering over any bubble, and you will see the <ins> annual hours worked</ins> 
+                along with its <ins> GDP per capita</ins> in 2019:
+            </font>
+
+            <div id="scatterplot-1"> </div>
+        </div>
+
+        <div class="mt-4 p-3 bg-primary text-white rounded">
+            <p class="font-size-lg"> According to the scatter plot above, one may infer that: </p>
+
+            <ul>
+                <li class="font-size-lg mt-10"> 
+                    In general, workers in more developed and richer countries (mostly in Europe, North America 
+                    and part of Asia) tend to work fewer hours than workers in poorer and less developed countries.
+                </li>
+
+                <li class="font-size-lg mt-10">
+                    The reason could be that workers in more developed countries yield (much) higher productivity in 
+                    an unit of work time in their economy system, as elaborated in the next slide. As a result,
+                    workers in more developed countries may obtain higher incomes with even shorter work time, 
+                    compared with their counterparts in less developed countries, therefore having more space and 
+                    opportunities for self-development or relaxation before/after work.
+                </li>
+
+                <li class="font-size-lg mt-10">
+                    The distribution of work-life-balance as well as economic income is highly uneven across the 
+                    world: workers in less developed countries work longer, but receive less income compared with
+                    their counterparts in more developed countries. This set of data makes us rethink of our
+                    notions of economic globalization and wealth distribution over the last century, as well as 
+                    the nature and cause of significant economic/work inequality among countries and regions.
+                </li>
+            </ul>
+
+            <hr class="my-4">
+
+            <div class="mt-30">
+                CSV Data Source of Visluzation:
+                <a href="https://ourworldindata.org/grapher/annual-working-hours-vs-gdp-per-capita-pwt" 
+                        style="color:#C70039" target="_blank"> 
+                    <i> Our World in Data</i>, Annual working hours vs. GDP per capita
+                </a>
+            </div>
+            <p> </p>
+
+            <div class="mt-10 text-center">
+                Next: Average Annual Working Hours vs. Hourly Labour Productivity
+                <span style="font-size:30px"> &LongRightArrow; </span>
+                <a class="btn btn-warning btn-s" href="view_3.html" role="button"> 
+                    <button class="my-button"> Next Scene </button>
+                </a>
+            </div>
+
+            <div class="mt-10 text-center">
+                Previous: Home Page
+                <span style="font-size:30px"> &LongRightArrow; </span>
+                <a class="btn btn-danger btn-s" href="../index.html" role="button"> 
+                    <button class="my-button"> Previous Scene </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <p> </p>
+</body>
+</html>
