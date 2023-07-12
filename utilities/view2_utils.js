@@ -24,7 +24,7 @@ async function renderFirstChart(year) {
 
     // Declare Y scale and add Y axis (Avg. GDP per Capita at the year, [$]) 
     const yScale = d3.scaleLinear()
-                     .domain([1000, 70000])  // Hard-coded GDP range
+                     .domain([1000, 74000])  // Hard-coded GDP range
                      .range([height_scatterPlot, 0]);
     svg.append("g")
        .call(d3.axisLeft(yScale).tickFormat(d => d + " $/year"));
@@ -98,7 +98,7 @@ async function renderFirstChart(year) {
 }
 
 function renderFirstChartAnnotations(d, x, y, margin) {
-    const dx = 30, dy = -30;
+    const dx = (d.entity == "Uruguay") ? -30 : 30, dy = -30;
 
     const annotations = [
         {

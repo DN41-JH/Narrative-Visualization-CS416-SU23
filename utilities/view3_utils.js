@@ -24,7 +24,7 @@ async function renderSecondChart(year) {
 
     // Declare Y scale and add Y axis (Avg. annual working hours, [hours])
     const yScale = d3.scaleLinear()
-                     .domain([0, 95])  // Hard-coded Avg. productivity per capita range
+                     .domain([0, 90])  // Hard-coded Avg. productivity per capita range
                      .range([height_scatterPlot, 0]);
     svg.append("g")
        .call(d3.axisLeft(yScale).tickFormat(d => d + " $/hr"));
@@ -98,7 +98,7 @@ async function renderSecondChart(year) {
 }
 
 function renderSecondChartAnnotations(d, x, y, margin) {
-    const dx = 30, dy = -30;
+    const dx = ((d.entity == "Uruguay") || (d.entity == "Hong Kong")) ? -30 : 30, dy = -30;
 
     const annotations = [
         {
