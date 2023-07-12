@@ -1,4 +1,5 @@
-const dataPath = "data/";  // This should be the path of source .csv files on deployment.
+const myProxy = "https://jliu115-observablehq.herokuapp.com/"
+const dataPath = "../data/";  // This should be the path of source .csv files on deployment.
 const hours_vs_gdp_csv = "annual-working-hours-vs-gdp-per-capita.csv";
 const hours_vs_productivity_csv = "productivity-vs-annual-hours-worked.csv"; 
 const time_vs_productivity_csv = "labor-productivity-per-hour.csv";
